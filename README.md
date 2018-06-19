@@ -372,13 +372,7 @@ It easily can see that rotated data set increase around 1% for validation accura
 
 ## Test a model on New Images
 I download 6 Germany traffic sign images from Internet. 
-
-![jpg](New-Traffic-Signs/GTS1.jpg)
-![jpg](New-Traffic-Signs/GTS2.jpg)
-![jpg](New-Traffic-Signs/GTS3.jpg)
-![jpg](New-Traffic-Signs/GTS4.jpg)
-![jpg](New-Traffic-Signs/GTS5.jpg)
-![jpg](New-Traffic-Signs/GTS6.jpg)
+![png](Figures/new-sign_org.png)
 
 
 The images from Internet have fine resolution and the sizes are much large than 32X32, so my concern is that when I resize those images to 32X32 by using opencv2, the sharpness and resolution will decrese significantly, which will cause a issue to classify the sign for my model.
