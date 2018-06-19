@@ -296,13 +296,21 @@ def rotation(X_data):
         Rot_X_images.append(Rot_X_image)
     
     return np.asarray(Rot_X_images)
-   
+    
 X_train_rot = rotation(gray_train_images)
 
-Normalized_X_train_rot = (X_train_rot - np.float32(128)) / np.float32(128)
-X_train_rot, y_train_rot = shuffle(Normalized_X_train_rot, y_train_clean)
+index = 1000
+
+
+plt.figure(figsize=(20,10))
+for i in range(0,8):
+    plt.subplot(2,4,i+1)
+    plt.imshow(X_train_rot[index+i].squeeze(),cmap='gray')
+plt.show()
 
 ```
+![png](Figures/rot.png)
+
 
 ### Translate the images and generate a new train data set
 Similarly, the sign in the image sometime can not perfectly located in the middle of image. So our training data set also need to include the scenario that the sign will have some shift away from middle of image. The way I have done is that I randomly shift the object's location on horizontal and vertical position from -2 to 2 pixel and generate a new training data set to train the model.
@@ -324,13 +332,20 @@ def translation(X_data):
     
     return np.asarray(trans_X_images)
 
-
 X_train_trans = translation(gray_train_images)
 
-Normalized_X_train_trans = (X_train_trans - np.float32(128)) / np.float32(128)
-X_train_trans, y_train_trans = shuffle(Normalized_X_train_trans, y_train_clean)
+index = 1000
+
+plt.figure(figsize=(20,10))
+for i in range(0,8):
+    plt.subplot(2,4,i+1)
+    plt.imshow(X_train_trans[index+i].squeeze(),cmap='gray')
+plt.show()
 
 ```
+![png](Figures/trans.png)
+
+
 ### Model Architecture
 To classify the traffic sign and train the model, I choosed AdamOptimizer at a learning rate of 0.001. The batch size is 128 training samples. And 25 epochs is choose for training on CPU.
 
