@@ -73,16 +73,19 @@ image_shape = X_train_clean[0].shape
 n_classes = 43
 
 print("Number of training examples =", n_train)
+print("Number of validation examples =", n_train)
 print("Number of testing examples =", n_test)
 print("Image data shape =", image_shape)
 print("Number of classes =", n_classes)
 
 ``` 
-    Number of training examples = 34799
-    Number of testing examples = 12630
-    Image data shape = (32, 32, 3)
-    Number of classes = 43
-
+```
+Number of training examples = 34799
+Number of validation examples = 34799
+Number of testing examples = 12630
+Image data shape = (32, 32, 3)
+Number of classes = 43
+```
 
 #### Exploratory visualization of the dataset
 
