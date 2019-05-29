@@ -90,7 +90,7 @@ I colleceted the labels in the data set and summarized the distribution around a
 
 I also plot a histogram for the above data, which is intuitive to see the distribution of data sets.
 
-![png](Figures/dataset distribution.png)
+![png](Figures/dataset_distribution.png)
 
 It looks like the the distribution for each sign in various dataset(train, validation, test) is similiar. It is important because if the distributions are quite different, the model trained by train dataset can not guarantee it will have similiar performance/accuracy.
 
