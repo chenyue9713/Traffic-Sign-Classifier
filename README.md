@@ -90,7 +90,7 @@ I colleceted the labels in the data set and summarized the distribution around a
 
 I also plot a histogram for the above data, which is intuitive to see the distribution of data sets.
 
-![png](Figures/dataset_distribution.png)
+![png](Figures/dataset distribution.png)
 
 It looks like the the distribution for each sign in various dataset(train, validation, test) is similiar. It is important because if the distributions are quite different, the model trained by train dataset can not guarantee it will have similiar performance/accuracy.
 
@@ -149,7 +149,7 @@ I generate 10 new images for each image in the training set by using above techn
 
 The architecture I used was converged after trying several different architectures. Following figure show the architecture:
 
-![png](Figures/model.png)
+![png](Figures/model.PNG)
 
 The input layer is 32X32 grey scaled image, which is preprocessed before feeding into network. Because color of traffic sign is less important than it's pattern. so in order to reduce the dimension of input, the image transfer from RGB to gray scale.
 
@@ -236,22 +236,24 @@ Sign 6: No entry                                  No entry
 The model classify 5 of 6 traffic signs, Only the speed limit (70km/h) classify to speed limit (30km/h). the accuracy is 83.3%
 
 The top five soft max probabilites for the 6 new image is following:
-```
-                                             Top 5 Softmax Probabilities            
-Sign  1 : Speed limit (30km/h) |  Speed limit (20km/h) |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing
-               1.00000         |  0.00000              |  0.00000      |  0.00000            |  0.00000
-Sign  2 : Road work    |  Road narrows on the right   |   Bumpy road   |  Beware of ice/snow  |  Bicycles crossing
-          0.99986      |        0.00012               |   0.00002      |   0.00000            |  0.00000
-Sign  3 : Right-of-way at the next intersection|Beware of ice/snow | Bumpy road | Beware of ice/snow  |  Bicycles crossing
-          1.00000                              |      0.00000      |  0.00000   |    0.00000          |  0.00000
-Sign  4 : Pedestrians  |  Right-of-way at the next intersection |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing
-          1.00000      |               0.00000                  |  0.00000      |   0.00000            |  0.00000
-Sign  5 : Stop         |  Keep left    |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing
-          0.99936      |  0.00035      |  0.00022      |  0.00000             |  0.00000
-Sign  6 : No entry     |  Stop         |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing
-          1.00000      |  0.00000      |  0.00000      |  0.00000             |  0.00000
 
-```
+
+                                             Top 5 Softmax Probabilities 
+|:---------:|:----------------:|:------------:|:-----------:|:------------:|           
+Sign  1 : Speed limit (30km/h) |  Speed limit (20km/h) |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+               1.00000         |  0.00000              |  0.00000      |  0.00000            |  0.00000|
+Sign  2 : Road work    |  Road narrows on the right   |   Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+          0.99986      |        0.00012               |   0.00002      |   0.00000            |  0.00000|
+Sign  3 : Right-of-way at the next intersection|Beware of ice/snow | Bumpy road | Beware of ice/snow  |  Bicycles crossing|
+          1.00000                              |      0.00000      |  0.00000   |    0.00000          |  0.00000|
+Sign  4 : Pedestrians  |  Right-of-way at the next intersection |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+          1.00000      |               0.00000                  |  0.00000      |   0.00000            |  0.00000|
+Sign  5 : Stop         |  Keep left    |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+          0.99936      |  0.00035      |  0.00022      |  0.00000             |  0.00000|
+Sign  6 : No entry     |  Stop         |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+          1.00000      |  0.00000      |  0.00000      |  0.00000             |  0.00000|
+
+
 The model classifies sign 1, sign 3, sign 4, sign 6 with almost 100% certainty. the certainties for rest signs are also 99%. 
 And there is one more thing I make my attention. The model disclassify sign 1 as speed limit(30km/h), the correct sign, speed limit (70km/h), is at the top five soft max probabilities. In my opinion there are two opinion for this situation: 1. as I mentioned above, after resizing, the images become hard to recongize by the model. 2. Training data set probably is incompleted for some scenario, such as scaling, squeeze, stroke width and color perturbation. 
 
