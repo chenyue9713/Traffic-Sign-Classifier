@@ -238,20 +238,32 @@ The model classify 5 of 6 traffic signs, Only the speed limit (70km/h) classify 
 The top five soft max probabilites for the 6 new image is following:
 
 
-                                             Top 5 Softmax Probabilities 
-|:---------:|:----------------:|:------------:|:-----------:|:------------:|           
-Sign  1 : Speed limit (30km/h) |  Speed limit (20km/h) |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
-               1.00000         |  0.00000              |  0.00000      |  0.00000            |  0.00000|
-Sign  2 : Road work    |  Road narrows on the right   |   Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
-          0.99986      |        0.00012               |   0.00002      |   0.00000            |  0.00000|
-Sign  3 : Right-of-way at the next intersection|Beware of ice/snow | Bumpy road | Beware of ice/snow  |  Bicycles crossing|
-          1.00000                              |      0.00000      |  0.00000   |    0.00000          |  0.00000|
-Sign  4 : Pedestrians  |  Right-of-way at the next intersection |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
-          1.00000      |               0.00000                  |  0.00000      |   0.00000            |  0.00000|
-Sign  5 : Stop         |  Keep left    |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
-          0.99936      |  0.00035      |  0.00022      |  0.00000             |  0.00000|
-Sign  6 : No entry     |  Stop         |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
-          1.00000      |  0.00000      |  0.00000      |  0.00000             |  0.00000|
+                                             Top 5 Softmax Probabilities
+                                             
+
+|Sign 1 | Speed limit (30km/h) |       Speed limit (20km/h)   |  Bumpy road    |  Beware of ice/snow  |  Bicycles crossing| 
+|:---------:|:----------------:|:------------:|:-----------:|:------------:|:------------:|
+|        |      1.00000         |  0.00000              |  0.00000      |  0.00000            |  0.00000|
+
+|Sign 2 |      Road work       |  Road narrows on the right   |   Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+|:---------:|:----------------:|:------------:|:-----------:|:------------:|:------------:|
+|        |          0.99986      |        0.00012               |   0.00002      |   0.00000            |  0.00000|
+
+|Sign 3 | Right-of-way at the next intersection|Beware of ice/snow | Bumpy road | Beware of ice/snow  |  Bicycles crossing|
+|:---------:|:----------------:|:------------:|:-----------:|:------------:|:------------:|
+|        |          1.00000                              |      0.00000      |  0.00000   |    0.00000          |  0.00000|
+
+|Sign 4 |      Pedestrians     |  Right-of-way at the next intersection |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+|:---------:|:----------------:|:------------:|:-----------:|:------------:|:------------:|
+|        |          1.00000      |               0.00000                  |  0.00000      |   0.00000            |  0.00000|
+
+|Sign 5 |         Stop         |       Keep left      |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+|:---------:|:----------------:|:------------:|:-----------:|:------------:|:------------:|
+|        |          0.99936      |  0.00035      |  0.00022      |  0.00000             |  0.00000|
+
+|Sign 6 | No entry  |  Stop         |  Bumpy road   |  Beware of ice/snow  |  Bicycles crossing|
+|:---------:|:----------------:|:------------:|:-----------:|:------------:|:------------:|
+|        |         1.00000      |  0.00000      |  0.00000      |  0.00000             |  0.00000|
 
 
 The model classifies sign 1, sign 3, sign 4, sign 6 with almost 100% certainty. the certainties for rest signs are also 99%. 
